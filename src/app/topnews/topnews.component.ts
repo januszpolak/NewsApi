@@ -11,6 +11,11 @@ export class TopnewsComponent implements OnInit {
   constructor(private _services:ApiservicesService) { }
 
   ngOnInit(): void {
+  
+  this._services.topNews().subscribe((result)=>{
+    console.log(result)
+  })
+  
   }
 
 }
