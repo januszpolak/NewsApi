@@ -10,10 +10,14 @@ export class TopnewsComponent implements OnInit {
 
   constructor(private _services:ApiservicesService) { }
 
+  showTopNews:any = [];
+
   ngOnInit(): void {
   
   this._services.topNews().subscribe((result)=>{
     console.log(result)
+
+  this.showTopNews = result.articles;
   })
   
   }
